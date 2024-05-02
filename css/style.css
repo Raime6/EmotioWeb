@@ -1,0 +1,106 @@
+:root
+{
+    --purpleColor:rgb(188, 148, 188);
+    --darkPurpleColor: rgb(72, 19, 73);
+    --greenColor:rgb(136, 166, 136);
+    --whiteColor: aliceblue;
+}
+
+body
+{
+    background-color:var(--purpleColor);
+    padding: 0px;
+    border: 0px;
+    margin: 0;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
+{
+    width: 60px;
+}
+
+.menu-cont
+{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--darkPurpleColor);
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+nav
+{
+    color:var(--whiteColor);
+}
+
+nav .menu-opt
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav .menu-opt a
+{
+    color:var(--whiteColor);
+    text-decoration:underline;
+    display: block;
+}
+
+
+button
+{
+    padding: 5px 10px;
+    background-color: var(--whiteColor);
+    color: var(--greenColor);
+    border-radius: 20px;
+    display: block;
+}
+
+.teaser
+{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.teaser > iframe
+{
+    width: 90%;
+    height: 90%;
+}
+
+.presentation
+{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 0 130px;
+}
+
+.presentation .presentation-img
+{
+    width: 20%;
+    text-align: center;
+}
+
+.presentation .presentation-text
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0 30px;
+}
