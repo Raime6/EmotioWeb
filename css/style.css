@@ -88,7 +88,7 @@ button
     display: flex; 
     justify-content: center;
     align-items: center;
-    padding: 0 130px;
+    padding: 100px 130px;
 }
 
 .presentation .presentation-img
@@ -104,3 +104,67 @@ button
     width: 80%;
     padding: 0 30px;
 }
+
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card-cont
+{
+    /* padding: 300px; */
+    position: relative;
+}
+
+.card
+{
+    transform: translate(-50%, -100%);
+    position: absolute;
+}
+
+.characters img
+{
+    width: 200px;
+    height: 300px;
+}
+
+.card-cont .card:first-child
+{
+    transform: translate(-60%, -100%) rotate(45deg);
+}
+
+.card-cont .card:last-child
+{
+     transform: translate(60%, -100%) rotate(-45deg);
+}
+
+footer
+{
+    display: flex;
+    color: var(--whiteColor);
+    padding: 10px 25px;
+    background-color: var(--darkPurpleColor);
+    justify-content: space-evenly;
+
+}
+
+footer .message
+{
+     /* width: 30%; */
+}
+
+footer .social
+{
+    /* width: 70%; */
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+footer .social .menu-opt button
+{
+    width: 100px;
+}
+
