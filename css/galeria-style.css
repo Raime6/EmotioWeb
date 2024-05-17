@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+:root
+{
+    --purpleColor:rgb(188, 148, 188);
+    --darkPurpleColor: rgb(72, 19, 73);
+    --greenColor:rgb(136, 166, 136);
+    --whiteColor: aliceblue;
+
+    /* Variables de los margenes */
+    --m1In: 100%;
+    --m2In: 62%;
+    --m3In: 38%;
+    --m4In: 22%;
+    --m5In: 15%;
+    --m5Em: 9em;
+
+    --m6In: 9.3%;
+    --m7In: 5.7%;
+    --m8In: 3.5%;
+
+    --m2: 41.86vw;
+    --m3: 25.89vw;
+    --m4: 16.06vw;
+    --m5: 9.92vw;
+    --m6: 6.14vw;
+    --m7: 3.78vw;
+    --m8: 2.34vw;
+
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color:var(--purpleColor);
+    padding: 0px;
+    border: 0px;
+    margin: 0;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
+{
+    width: 60px;
+}
+
+.menu-cont
+{
+    height: var(--m7);
+    padding-left: var(--m7);
+    padding-right: var(--m7);
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color:var(--darkPurpleColor);
+}
+
+nav
+{
+    color:var(--whiteColor);
+}
+
+nav .menu-opt
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+nav .menu-opt a
+{
+    color:var(--whiteColor);
+    text-decoration:underline;
+    display: block;
+}
+
+
+button
+{
+    padding: 5px 10px;
+    background-color: var(--whiteColor);
+    color: var(--greenColor);
+    border-radius: 20px;
+    display: block;
+}
+
+#gallery
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--m5Em);
+}
+
+#gallery .photos ul
+{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 12px
+}
+
+#gallery .photos ul li
+{
+    height: 35vh;
+    flex-grow: 1;
+    position: relative;
+}
+
+#gallery .photos ul li img
+{
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
