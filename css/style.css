@@ -7,14 +7,16 @@
 
 :root
 {
+    /* Variables de color */
     --purpleColor:rgb(249, 244, 249);
     --darkPurpleColor: rgb(72, 19, 73);
     --greenColor:rgb(136, 166, 136);
     --whiteColor: aliceblue;
     --palePinkColor: #EBE1F2;
+    --midPinkColor: #CDAEDB;
+    --midPurpleColor: #9D7CBE;
 
     /* Variables de los margenes */
-
     --m2: 41.86vw;
     --m3: 25.89vw;
     --m4: 16.06vw;
@@ -22,6 +24,12 @@
     --m6: 6.14vw;
     --m7: 3.78vw;
     --m8: 2.34vw;
+
+    /* Variables de las tipografías */
+    --h1Size: 32pt;
+    --h2Size: 17.8pt;
+    --textSize: 19.78pt;
+    --textSamllSize: 11pt;
 }
 
 body
@@ -40,15 +48,30 @@ img
     vertical-align: middle;
 }
 
+h1 
+{
+    margin-top: var(--m7);
+    margin-bottom: var(--m7);
+    font-weight: 650;
+    font-size: var(--h1Size);
+}
+
+p {
+    font-size: var(--textSize);
+}
+
 body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
 {
     width: 60px;
 }
 
+
+/* -------- HEADER --------*/
+
 .menu-cont
 {
-    height: var(--m7);
-    border-bottom: 100px;
+    /* height: var(--m7); */
+    border-bottom-width: 7px;
     border-color: var(--palePinkColor);
     padding-left: var(--m7);
     padding-right: var(--m7);
@@ -61,12 +84,12 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     justify-content: space-between;
     align-items: center;
 
-    background-color:var(--darkPurpleColor);
+    background-color: var(--darkPurpleColor);
 }
 
 nav
 {
-    color:var(--whiteColor);
+    color: var(--whiteColor);
 }
 
 nav .menu-opt
@@ -74,25 +97,45 @@ nav .menu-opt
     list-style: none;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: var(--m7);
 }
 
 nav .menu-opt a
 {
-    color:var(--whiteColor);
-    text-decoration:underline;
+    color: var(midPurpleColor);
+    background-color: var(--midPinkColor);
+    text-decoration: none;
     display: block;
+
+    font-size: var(--textSize);
+    font-weight: 650;
+
+    padding: 0px 60px;
+    border: 3px;
+    border-radius: 20px;
+    border-color: var(--midPurpleColor);
 }
 
 
 button
 {
     padding: 5px 10px;
-    background-color: var(--whiteColor);
-    color: var(--greenColor);
+    background-color: var(--midPinkColor);
+    color: var(--whiteColor);
     border-radius: 20px;
+    border-color: var(--midPurpleColor);
+
+    border-width: 10px;
+
     display: block;
+
+    font-family: 'Fredoka';
+    font-size: var(--textSize);
+    font-weight: 650;
 }
+
+
+/* -------- TEASER --------*/
 
 .teaser
 {
@@ -110,6 +153,9 @@ button
     width: 100%;
     height: 80%;
 }
+
+
+/* -------- PROTAGONISTA --------*/
 
 .protagonist
 {
@@ -138,17 +184,15 @@ button
     margin-left: var(--m7);
 }
 
-h1 
-{
-    margin-top: var(--m7);
-    margin-bottom: var(--m7);
-}
 
 .protagonist .protagonist-description-container
 {
     background-color: aliceblue;
     padding: 0 var(--m7);
 }
+
+
+/* -------- EMOCIONES --------*/
 
 .characters {
     display: flex;
@@ -215,6 +259,9 @@ h1
     transform: translate(40%, -120%) scale(1.2, 1.2) rotate(0deg);
     z-index: 3;
 }
+
+
+/* -------- FOOTER --------*/
 
 footer
 {

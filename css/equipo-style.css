@@ -1,24 +1,22 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url(../fonts/Fredoka.ttf);
+}
 
 :root
 {
-    --purpleColor:rgb(188, 148, 188);
+    /* Variables de color */
+    --purpleColor:rgb(249, 244, 249);
     --darkPurpleColor: rgb(72, 19, 73);
     --greenColor:rgb(136, 166, 136);
     --whiteColor: aliceblue;
+    --palePinkColor: #EBE1F2;
+    --midPinkColor: #CDAEDB;
+    --midPurpleColor: #9D7CBE;
 
     /* Variables de los margenes */
-    --m1In: 100%;
-    --m2In: 62%;
-    --m3In: 38%;
-    --m4In: 22%;
-    --m5In: 15%;
-    --m5Em: 9em;
-    
-    --m6In: 9.3%;
-    --m7In: 5.7%;
-    --m8In: 3.5%;
-
     --m2: 41.86vw;
     --m3: 25.89vw;
     --m4: 16.06vw;
@@ -26,6 +24,12 @@
     --m6: 6.14vw;
     --m7: 3.78vw;
     --m8: 2.34vw;
+
+    /* Variables de las tipografías */
+    --h1Size: 32pt;
+    --h2Size: 17.8pt;
+    --textSize: 19.78pt;
+    --textSamllSize: 11pt;
 }
 
 body
@@ -34,6 +38,7 @@ body
     padding: 0px;
     border: 0px;
     margin: 0;
+    font-family: 'Fredoka';
 }
 
 img
@@ -41,6 +46,18 @@ img
     width: 100%;
     height: auto;
     vertical-align: middle;
+}
+
+h1 
+{
+    margin-top: var(--m7);
+    margin-bottom: var(--m7);
+    font-weight: 650;
+    font-size: var(--h1Size);
+}
+
+p {
+    font-size: var(--textSize);
 }
 
 body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
