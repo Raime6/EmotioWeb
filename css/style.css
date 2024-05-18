@@ -1,24 +1,19 @@
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url(../fonts/Fredoka.ttf);
+}
 
 :root
 {
-    --purpleColor:rgb(188, 148, 188);
+    --purpleColor:rgb(249, 244, 249);
     --darkPurpleColor: rgb(72, 19, 73);
     --greenColor:rgb(136, 166, 136);
     --whiteColor: aliceblue;
+    --palePinkColor: #EBE1F2;
 
     /* Variables de los margenes */
-    --m1In: 100%;
-    --m2In: 62%;
-    --m3In: 38%;
-    --m4In: 22%;
-    --m5In: 15%;
-    --m5Em: 9em;
-
-    --m6In: 9.3%;
-    --m7In: 5.7%;
-    --m8In: 3.5%;
 
     --m2: 41.86vw;
     --m3: 25.89vw;
@@ -35,6 +30,7 @@ body
     padding: 0px;
     border: 0px;
     margin: 0;
+    font-family: 'Fredoka';
 }
 
 img
@@ -52,6 +48,8 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
 .menu-cont
 {
     height: var(--m7);
+    border-bottom: 100px;
+    border-color: var(--palePinkColor);
     padding-left: var(--m7);
     padding-right: var(--m7);
 
@@ -133,6 +131,11 @@ button
     display: flex;
     flex-direction: column;
     width: var(--m2);
+}
+
+.protagonist .protagonist-text h1
+{
+    margin-left: var(--m7);
 }
 
 h1 
