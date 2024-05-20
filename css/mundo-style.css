@@ -11,7 +11,7 @@
     --purpleColor:rgb(249, 244, 249);
     --darkPurpleColor: rgb(72, 19, 73);
     --greenColor:rgb(136, 166, 136);
-    --whiteColor: aliceblue;
+    --whiteColor: #ffffff;
     --palePinkColor: #EBE1F2;
     --midPinkColor: #CDAEDB;
     --midPurpleColor: #9D7CBE;
@@ -25,6 +25,12 @@
     --m7: 3.78vw;
     --m8: 2.34vw;
 
+    --m5Em: 9em;
+    --m8Em: 3em;
+    --m1em: 1em;
+    --m12Em: 12em;
+    --m30: 42vw;
+
     /* Variables de las tipografías */
     --h1Size: 32pt;
     --h2Size: 17.8pt;
@@ -34,7 +40,7 @@
 
 body
 {
-    background-color:var(--purpleColor);
+    background-color:var(--whiteColor);
     padding: 0px;
     border: 0px;
     margin: 0;
@@ -54,6 +60,13 @@ h1
     margin-bottom: var(--m7);
     font-weight: 650;
     font-size: var(--h1Size);
+
+    color: var(--whiteColor);
+    text-shadow: 
+        -2px -2px 0 var(--midPurpleColor),  
+        2px -2px 0 var(--midPurpleColor),
+        -2px 2px 0 var(--midPurpleColor),
+        2px 2px 0 var(--midPurpleColor);
 }
 
 p {
@@ -65,11 +78,18 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     width: 60px;
 }
 
+/* -------- HEADER --------*/
+
 .menu-cont
 {
-    height: var(--m7);
+    /* height: var(--m7); */
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border-bottom: 7px solid var(--midPinkColor);
     padding-left: var(--m7);
     padding-right: var(--m7);
+    background-color: var(--whiteColor);
 
     position: sticky;
     top: 0;
@@ -78,13 +98,11 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-color:var(--darkPurpleColor);
 }
 
 nav
 {
-    color:var(--whiteColor);
+    color: var(--whiteColor);
 }
 
 nav .menu-opt
@@ -92,25 +110,46 @@ nav .menu-opt
     list-style: none;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: var(--m7);
 }
 
 nav .menu-opt a
 {
-    color:var(--whiteColor);
-    text-decoration:underline;
+    color: var(midPurpleColor);
+    background-color: var(--midPinkColor);
+    text-decoration: none;
     display: block;
+
+    font-size: var(--textSize);
+    font-weight: 650;
+
+    padding: 0px 60px;
+    border: 5px solid var(--midPurpleColor);
+    border-radius: 20px;
+    border-color: var(--midPurpleColor);
 }
 
 
 button
 {
     padding: 5px 10px;
-    background-color: var(--whiteColor);
-    color: var(--greenColor);
+    background-color: var(--midPinkColor);
+    color: var(--whiteColor);
     border-radius: 20px;
+    border-color: var(--midPurpleColor);
+
+    border-width: 5px;
+
+    text-decoration: none;
     display: block;
+
+    font-family: 'Fredoka';
+    font-size: var(--textSize);
+    font-weight: 650;
 }
+
+
+/* ----- CAROUSEL ----- */
 
 .fondo
 {
@@ -137,7 +176,7 @@ button
 
 .slides img:first-child
 {
-    margin-left: var(--12Em);
+    margin-left: var(--m12Em);
 }
 
 .slides img 
@@ -148,7 +187,7 @@ button
     padding-left: var(--m8Em);
 }
 
-
+/* ----- TEXT ----- */
   
 .prev, .next 
 {
@@ -190,19 +229,18 @@ button
 {
     align-items: center;
     display: flex;
-    margin: 0 var(--m8Em) var(--12Em) var(--m8Em);
+    margin: 0 var(--m8Em) var(--m12Em) var(--m8Em);
 }
 
 .elMundo .section-2 p
 {
-  
-    padding: 0 var(--1em) 0 var(--1em);
+    text-align: left;
+    padding: 0 var(--m1em) 0 var(--m1em);
 }
 
 .elMundo .section-2 img
 {
     width: var(--m30);
 }
-
 
   
