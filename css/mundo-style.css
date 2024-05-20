@@ -30,6 +30,8 @@
     --m1em: 1em;
     --m12Em: 12em;
     --m30: 42vw;
+    --m4_3: 20vw;
+    --espacioImagenes: 2em;
 
     /* Variables de las tipografías */
     --h1Size: 32pt;
@@ -243,4 +245,96 @@ button
     width: var(--m30);
 }
 
-  
+.characters
+{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacioImagenes);
+    padding-bottom: var(--m5);
+}
+
+.characters div
+{
+    display: flex;
+    flex-direction: column;
+    width: var(--m3);
+    align-self: center;
+    justify-self: center;
+    padding: 0 var(--m1em);
+}
+
+.characters .character-img
+{
+    width: var(--m4_3);
+    border: 7px solid #2B0E39;
+    border-radius: 20px;
+}
+
+.characters .character-description-container
+{
+    margin: 0;
+    width: var(--m4);
+    background-color: #EFEAFF;
+    border: 7px solid #2B0E39;
+    border-top: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.characters .character-description-container .title
+{
+    font-size: var(--h2Size);
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.characters .character-description-container .character-description
+{
+    font-size: var(--textSamllSize);
+}
+
+.boss
+{
+    display: flex; 
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: top;
+    padding: 0 var(--m4);
+    padding-bottom: var(--m5);
+}
+
+.boss .boss-img
+{
+    padding: 0 var(--m1em);
+    width: var(--m3);
+    border: 7px solid #2B0E39;
+    border-radius: 20px;
+}
+
+.boss .boss-text
+{
+    display: flex;
+    flex-direction: column;
+    width: var(--m2);
+}
+
+.boss .boss-text h1
+{
+    align-self: self-end;   
+    margin-right: var(--m7);
+}
+
+
+.boss .boss-description-container
+{
+    background-color: #EFEAFF;
+    padding: 0 var(--m7);
+
+    border: 7px solid #2B0E39;
+    border-right: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}

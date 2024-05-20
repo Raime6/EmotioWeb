@@ -25,6 +25,9 @@
     --m7: 3.78vw;
     --m8: 2.34vw;
 
+    --m1em: 1em;
+
+    
     /* Variables de las tipografías */
     --h1Size: 32pt;
     --h2Size: 17.8pt;
@@ -179,7 +182,7 @@ button
 {
     width: var(--m3);
     text-align: top;
-
+    padding: 0 var(--m1em);
     border: 7px solid #2B0E39;
     border-radius: 20px;
 }
