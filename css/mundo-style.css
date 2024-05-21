@@ -15,6 +15,7 @@
     --palePinkColor: #EBE1F2;
     --midPinkColor: #CDAEDB;
     --midPurpleColor: #9D7CBE;
+    --midCambiodeColor: #7c598b;
 
     /* Variables de los margenes */
     --m2: 41.86vw;
@@ -116,6 +117,8 @@ nav .menu-opt
     gap: var(--m7);
 }
 
+nav .menu-opt a:hover {background-color: var(--midCambiodeColor)}
+
 nav .menu-opt a
 {
     color: var(midPurpleColor);
@@ -130,6 +133,7 @@ nav .menu-opt a
     border: 5px solid var(--midPurpleColor);
     border-radius: 20px;
     border-color: var(--midPurpleColor);
+    transition: 0.4s;
 }
 
 #menuToggle, .menu-icon
