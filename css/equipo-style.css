@@ -15,6 +15,7 @@
     --palePinkColor: #EBE1F2;
     --midPinkColor: #CDAEDB;
     --midPurpleColor: #9D7CBE;
+    --transparentPurple: rgba(72, 19, 73, 0.446);
 
     /* Variables de los margenes */
     --m2: 41.86vw;
@@ -172,6 +173,20 @@ button
     height: 300px;
 }
 
+.text-overlay 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--whiteColor);
+    background-color: var(--transparentPurple);
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 17px;
+    text-align: center;
+}
+
 .card-cont .card
 {
     transition: all 0.15s;
@@ -266,7 +281,7 @@ footer .contact-container h1
 .contact-form
 {
     max-width: 420px;
-    margin:20px auto;
+    margin:20px 30px;
 }
 
 .feedback-input
@@ -334,6 +349,89 @@ footer .contact-container h1
     nav .menu-opt a
     {
         padding: 3px;
+    }
+
+    .equipo 
+    {
+        flex-wrap: wrap;
+        height: 625px;
+    }
+    
+    .card
+    {
+        padding: 4% 0;
+        transform: none;
+        position: relative;
+    }
+    
+    .equipo img
+    {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .card-cont .card:first-child
+    {
+        transform:none;
+        z-index: 0;
+    }
+    
+    .card-cont .card:nth-child(2)
+    {
+        transform:none;
+        z-index: 0;
+    }
+
+    .card-cont .card:nth-child(3)
+    {
+        z-index: 0;
+    }
+
+    .card-cont .card:nth-child(4)
+    {
+        transform:none;
+        z-index: 0;
+    }
+
+    .card-cont .card:last-child
+    {
+        transform: none;
+        z-index: 0;
+    }
+
+    .card-cont .card:first-child:hover
+    {
+        transform: none;
+        z-index: 0;
+    }
+
+    .card-cont .card:nth-child(2):hover
+    {
+        transform: none;
+        z-index: 0;
+    }
+
+    .card-cont .card:nth-child(3):hover
+    {
+        transform: none;
+        z-index: 0;
+    }
+
+    .card-cont .card:nth-child(4):hover
+    {
+        transform: none;
+        z-index: 0;
+    }
+
+    .card-cont .card:last-child:hover
+    {
+        transform: none;
+        z-index: 0;
+    }
+
+    footer
+    {
+        margin-top: 1000px;
     }
 
 }
