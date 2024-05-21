@@ -38,6 +38,7 @@
     --h2Size: 17.8pt;
     --textSize: 19.78pt;
     --textSamllSize: 11pt;
+    --textMidSize: 15pt;
 }
 
 body
@@ -84,7 +85,6 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
 
 .menu-cont
 {
-    /* height: var(--m7); */
     border-collapse: separate;
     border-spacing: 0;
 
@@ -101,6 +101,7 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     justify-content: space-between;
     align-items: center;
 }
+
 
 nav
 {
@@ -131,6 +132,11 @@ nav .menu-opt a
     border-color: var(--midPurpleColor);
 }
 
+#menuToggle, .menu-icon
+{
+    color: var(--darkPurpleColor);
+    display: none;
+}
 
 button
 {
@@ -178,7 +184,7 @@ button
 
 .slides img:first-child
 {
-    margin-left: var(--m12Em);
+    margin-left: 150px;
 }
 
 .slides img 
@@ -189,7 +195,7 @@ button
     padding-left: var(--m8Em);
 }
 
-/* ----- TEXT ----- */
+
   
 .prev, .next 
 {
@@ -216,6 +222,8 @@ button
     right: var(--m8Em);
 }
 
+
+/* ----- TEXT ----- */
 .elMundo
 {
     align-items: center;
@@ -293,7 +301,7 @@ button
 
 .characters .character-description-container .character-description
 {
-    font-size: var(--textSamllSize);
+    font-size: var(--textMidSize);
 }
 
 .boss
@@ -308,11 +316,12 @@ button
 
 .boss .boss-img
 {
-    padding: 0 var(--m1em);
+    padding: 30px 0;
     width: var(--m3);
-    border: 7px solid #2B0E39;
-    border-radius: 20px;
+    /* border: 7px solid #2B0E39;
+    border-radius: 20px; */
 }
+
 
 .boss .boss-text
 {
@@ -337,4 +346,243 @@ button
     border-right: 0px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+/* pc pequeña */
+@media only screen and (max-width: 1290px)
+{
+    .slides img:first-child
+    {
+        margin-left: 0px;
+    }
+
+    .slides img 
+    {
+        padding-left: 10px;
+    }
+    .boss .boss-text p
+    {
+        font-size: var(--textMidSize);
+    }
+}
+
+/* tablet */
+@media only screen and (max-width: 1030px)
+{
+   
+    nav .menu-opt
+    {
+        gap: 10px;
+    }
+    nav .menu-opt a
+    {
+        padding: 3px;
+    }
+
+    .slides img 
+    {
+        padding-left: 5px;
+    }
+
+    .prev, .next 
+    {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    
+    .prev 
+    {
+        left: 20px;
+    }
+    
+    .next 
+    {
+        right: 20px;
+    }
+
+    .elMundo .section-2 img 
+    {
+        width: 100%;
+    }
+
+    .elMundo .section-2 , .characters
+    {
+        flex-direction: column;
+    }
+
+    .characters div
+    {
+        padding: 20px 0;
+    }
+
+    .characters .character-img
+    {
+        width: 500px;
+        border: 6px solid #2B0E39;
+    }
+
+    .characters .character-description-container
+    {
+        padding-left: 10px;
+        width: 400px;
+        border: 6px solid #2B0E39;
+        border-top: 0;
+    }
+
+    .boss
+    {
+        padding: 0 5%;
+        padding-bottom: 10%;
+    }
+
+    .boss .boss-img
+    {
+        display: flex;
+        align-items: self-end;
+        padding: 30px var(--m1em);
+        width: var(--m2);
+    }
+
+    .boss .boss-text p
+    {
+        font-size: var(--textMidSize);
+    }
+
+    .boss .boss-text
+    {
+       padding-left: 20px;
+    }
+
+    .boss .boss-text h1
+    {
+        align-self: center;
+    }
+
+    .boss .boss-description-container
+    {
+        padding: 0 var(--m1em);
+        border: 7px solid #2B0E39;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+
+
+}
+
+/* mobile */
+@media only screen and (max-width: 580px)
+{
+    .menu-cont
+    {
+        padding-top: 20px;
+    }
+
+    .menu-cont, .menu-cont nav
+    {
+        display: block;
+    }
+    .menu-cont .menu-icon 
+    {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu-cont .menu-icon i
+    {
+        font-size: 2em;
+    }
+    .menu-opt
+    {
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.35s;
+    }
+
+    #menuToggle:checked ~ .menu-opt
+    {
+        max-height: 350px;
+    }
+
+    .menu-cont div:last-child
+    {
+         display: none;
+    }
+
+    
+    .prev, .next 
+    {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .prev 
+    {
+        left: 15px;
+    }
+    
+    .next 
+    {
+        right: 15px;
+    }
+
+    .elMundo .section-2
+    {
+        margin: 0 10px var(--m12Em) 10px;
+    }
+
+    .characters div
+    {
+        padding: 20px 0;
+    }
+
+    .characters .character-img
+    {
+        width: 350px;
+
+    }
+
+    .characters .character-description-container
+    {
+        margin-top: 15px;
+        border-top: 6px solid #2B0E39;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 350px;
+    }
+
+    p
+    {
+        font-size: var(--textMidSize);
+    }
+
+    .boss
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boss .boss-img
+    {
+        padding: 15px var(--m1em) 5px var(--m1em);
+    }
+
+    .boss .boss-text h1
+    {
+        text-align: center;
+    }
+    .boss .boss-text
+    {
+        width: var(--m1);
+        padding-left: 0;
+        padding-bottom: 50px;
+    }
 }

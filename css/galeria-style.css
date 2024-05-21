@@ -76,7 +76,6 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
 
 .menu-cont
 {
-    /* height: var(--m7); */
     border-collapse: separate;
     border-spacing: 0;
 
@@ -93,6 +92,7 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     justify-content: space-between;
     align-items: center;
 }
+
 
 nav
 {
@@ -123,6 +123,11 @@ nav .menu-opt a
     border-color: var(--midPurpleColor);
 }
 
+#menuToggle, .menu-icon
+{
+    color: var(--darkPurpleColor);
+    display: none;
+}
 
 button
 {
@@ -142,6 +147,7 @@ button
     font-weight: 650;
 }
 
+
 #gallery
 {
     display: flex;
@@ -152,17 +158,19 @@ button
 
 #gallery .photos ul
 {
+    justify-content: center;
+    align-items: center;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    gap: 12px
+    gap: 12px;
+    margin-right: 35px;
 }
 
 #gallery .photos ul li
 {
     height: 35vh;
-    flex-grow: 1;
     position: relative;
 }
 
@@ -172,4 +180,63 @@ button
     min-width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+}
+
+/* tablet */
+@media only screen and (max-width: 1030px)
+{
+   
+    nav .menu-opt
+    {
+        gap: 10px;
+    }
+    nav .menu-opt a
+    {
+        padding: 3px;
+    }
+
+
+}
+
+/* mobile */
+@media only screen and (max-width: 580px)
+{
+    .menu-cont
+    {
+        padding-top: 20px;
+    }
+
+    .menu-cont, .menu-cont nav
+    {
+        display: block;
+    }
+    .menu-cont .menu-icon 
+    {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu-cont .menu-icon i
+    {
+        font-size: 2em;
+    }
+    .menu-opt
+    {
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.35s;
+    }
+
+    #menuToggle:checked ~ .menu-opt
+    {
+        max-height: 350px;
+    }
+
+    .menu-cont div:last-child
+    {
+         display: none;
+    }
 }

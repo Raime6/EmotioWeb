@@ -73,10 +73,8 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
 }
 
 /* -------- HEADER --------*/
-
 .menu-cont
 {
-    /* height: var(--m7); */
     border-collapse: separate;
     border-spacing: 0;
 
@@ -93,6 +91,7 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     justify-content: space-between;
     align-items: center;
 }
+
 
 nav
 {
@@ -123,6 +122,11 @@ nav .menu-opt a
     border-color: var(--midPurpleColor);
 }
 
+#menuToggle, .menu-icon
+{
+    color: var(--darkPurpleColor);
+    display: none;
+}
 
 button
 {
@@ -140,4 +144,239 @@ button
     font-family: 'Fredoka';
     font-size: var(--textSize);
     font-weight: 650;
+}
+
+
+.equipo {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card-cont
+{
+    position: relative;
+}
+
+.card
+{
+    transform: translate(-50%, -100%);
+    position: absolute;
+}
+
+.equipo img
+{
+    width: 200px;
+    height: 300px;
+}
+
+.card-cont .card
+{
+    transition: all 0.15s;
+}
+
+.card-cont .card:first-child
+{
+    transform: translate(-228%, -70%) rotate(-25deg);
+    z-index: 4;
+}
+
+.card-cont .card:first-child:hover
+{
+    transform: translate(-228%, -90%) scale(1.2, 1.2) rotate(0deg);
+    z-index: 5;
+}
+
+.card-cont .card:nth-child(2)
+{
+    transform: translate(-140%, -92%) rotate(-15deg);
+    z-index: 3;
+}
+
+.card-cont .card:nth-child(2):hover
+{
+    transform: translate(-140%, -112%) scale(1.2, 1.2) rotate(0deg);
+    z-index: 5;
+}
+
+.card-cont .card:nth-child(3)
+{
+    z-index: 2;
+}
+
+.card-cont .card:nth-child(3):hover
+{
+    transform: translate(-50%, -120%) scale(1.2, 1.2) rotate(0deg);
+    z-index: 5;
+}
+
+.card-cont .card:nth-child(4)
+{
+    transform: translate(40%, -92%) rotate(15deg);
+    z-index: 1;
+}
+
+.card-cont  .card:nth-child(4):hover
+{
+    transform: translate(40%, -112%) scale(1.2, 1.2) rotate(0deg);
+    z-index: 5;
+}
+
+.card-cont .card:last-child
+{
+    transform: translate(128%, -70%) rotate(25deg);
+    z-index: 0;
+}
+
+.card-cont  .card:last-child:hover
+{
+    transform: translate(128%, -90%) scale(1.2, 1.2) rotate(0deg);
+    z-index: 5;
+}
+
+footer
+{
+    color: var(--whiteColor);
+}
+
+footer .contact-container
+{
+    /* width: 30%; */
+    background-color: var(--darkPurpleColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact-container h1
+{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: var(--whiteColor);
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.contact-form
+{
+    max-width: 420px;
+    margin:20px auto;
+}
+
+.feedback-input
+{
+    color: var(--whiteColor);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid var(--purpleColor);
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus
+{
+    border: 2px solid rgb(194, 102, 194);
+}
+
+.contact-form textarea
+{
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type="submit"]
+{
+    font-family: 'Monserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: var(--purpleColor);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: var(--darkPurpleColor);
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+
+[type="submit"]:hover
+{
+    background: rgb(194, 102, 194);
+    color: var(--whiteColor);
+}
+
+
+/* tablet */
+@media only screen and (max-width: 1030px)
+{
+   
+    nav .menu-opt
+    {
+        gap: 10px;
+    }
+    nav .menu-opt a
+    {
+        padding: 3px;
+    }
+
+}
+
+/* mobile */
+@media only screen and (max-width: 580px)
+{
+    .menu-cont
+    {
+        padding-top: 20px;
+    }
+
+    .menu-cont, .menu-cont nav
+    {
+        display: block;
+    }
+    .menu-cont .menu-icon 
+    {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu-cont .menu-icon i
+    {
+        font-size: 2em;
+    }
+    .menu-opt
+    {
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.35s;
+    }
+
+    #menuToggle:checked ~ .menu-opt
+    {
+        max-height: 350px;
+    }
+
+    .menu-cont div:last-child
+    {
+         display: none;
+    }
 }
