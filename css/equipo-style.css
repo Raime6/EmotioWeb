@@ -259,7 +259,7 @@ footer
 footer .contact-container
 {
     /* width: 30%; */
-    background-color: var(--darkPurpleColor);
+    background-color: var(--midPinkColor);
     display: flex;
     flex-direction: column;
     justify-content: center;
