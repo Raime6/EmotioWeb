@@ -181,6 +181,8 @@ nav .menu-opt a:hover:before
     z-index: 2;
 }
 
+/* termina boton 1 */
+
 
 
 
@@ -384,7 +386,73 @@ footer .social .social-buttons a
     transition: background-color 0.3s ease;
     text-decoration: none;
     background-color: var(--midPurpleColor); 
+    
+
+    z-index: 0;
+    position: relative;
 }
+
+/* boton rgb */
+
+footer .social .social-buttons a ::after
+{
+    content: "";
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    background-color: var(--midPurpleColor);
+    
+    position: absolute;
+    z-index: ;
+    left: 0;
+    top: 0;
+}
+
+/* glow */
+footer .social .social-buttons a ::before
+{
+    content: "";
+    background: linear-gradient(45deg,
+        #2B0E39,#7c598b,#9D7CBE,#CDAEDB,#EBE1F2);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 200%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(5px);    
+    /* animation */
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;   
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+/* hover */
+footer .social .social-buttons a:hover::before{
+    opacity: 1;
+}
+footer .social .social-buttons a:active::after{
+    background: transparent;
+}
+
+
+
 
 footer h2
 {
