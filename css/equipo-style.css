@@ -71,12 +71,21 @@ p {
     font-size: var(--textSize);
 }
 
-body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
+
+/* -------- HEADER --------*/
+
+.logo-celular 
 {
+    display: none;
+    width: 50px;
+}
+
+.logo-desktop 
+{
+    display: block;
     width: 80px;
 }
 
-/* -------- HEADER --------*/
 .menu-cont
 {
     border-collapse: separate;
@@ -472,9 +481,20 @@ footer .contact-container h1
 
 }
 
-/* mobile */
+/* celular */
 @media only screen and (max-width: 580px)
 {
+
+    .logo-celular 
+    {
+        display: block;
+    }
+
+    .logo-desktop 
+    {
+        display: none;
+    }
+
     .menu-cont
     {
         padding-top: 20px;

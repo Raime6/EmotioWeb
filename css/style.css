@@ -73,13 +73,20 @@ p {
     font-size: var(--textSize);
 }
 
-body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
-{
-    width: 80px;
-}
-
 
 /* -------- HEADER --------*/
+
+.logo-celular 
+{
+    display: none;
+    width: 50px;
+}
+
+.logo-desktop 
+{
+    display: block;
+    width: 80px;
+}
 
 .menu-cont
 {
@@ -99,7 +106,6 @@ body>.menu-cont img /*se puede cambiar luego a un selector o una opción mejor*/
     justify-content: space-between;
     align-items: center;
 }
-
 
 nav
 {
@@ -425,9 +431,19 @@ footer h2
 
 }
 
-/* mobile */
+/* celular */
 @media only screen and (max-width: 580px)
 {
+    .logo-celular 
+    {
+        display: block;
+    }
+
+    .logo-desktop 
+    {
+        display: none;
+    }
+
     .menu-cont
     {
         padding-top: 20px;
@@ -437,6 +453,7 @@ footer h2
     {
         display: block;
     }
+
     .menu-cont .menu-icon 
     {
         display: block;
