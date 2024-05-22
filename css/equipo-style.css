@@ -125,17 +125,9 @@ nav .menu-opt a
     border-radius: 20px;
     border-color: var(--midPurpleColor);
     transition: 0.4s;
-}
-
-/*-----------boton 1----------*/
-
-nav .menu-opt a
-{
     overflow: hidden;
-    border: 5px solid var(--midPurpleColor);
     z-index: 2;
 }
-
 
 nav .menu-opt a::before
 {
@@ -151,7 +143,7 @@ nav .menu-opt a::before
     z-index: -1;
 }
 
-nav .menu-opt a:hover:before
+nav .menu-opt a:hover::before
 {
     top: 0;
     border-radius: 0%;
@@ -160,14 +152,11 @@ nav .menu-opt a:hover:before
 .menu-opt a
 {
     position: relative;
-    padding: 20px 50px;
     text-decoration: none;
     color: var(--whiteColor);
-    text-indent: 10px;
     z-index: 2;
 }
 
-/* termina boton 1 */
 
 #menuToggle, .menu-icon
 {
@@ -362,24 +351,25 @@ footer .contact-container h1
 
 [type="submit"]
 {
-    font-family: 'Monserrat', Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    background-color: var(--whiteColor);
+    color: var(--midPurpleColor);
+    border-radius: 20px;
+    border-color: var(--midPurpleColor);
+    border-width: 5px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Fredoka';
+    font-size: var(--textSize);
+    font-weight: 650;
     width: 100%;
-    background: var(--purpleColor);
-    border-radius: 5px;
-    border: 0;
     cursor: pointer;
-    color: var(--darkPurpleColor);
-    font-size: 24px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition: all 0.3s;
-    margin-top: -4px;
-    font-weight: 700;
+    transition: all 0.4s;
 }
 
 [type="submit"]:hover
 {
-    background: rgb(194, 102, 194);
+    background: var(--darkPurpleColor);
     color: var(--whiteColor);
 }
 

@@ -129,27 +129,9 @@ nav .menu-opt a
     border-radius: 20px;
     border-color: var(--midPurpleColor);
     transition: 0.4s;
-}
-
-
-.contenedor{
-    display: flex;
-    height: 100vh;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/*-----------boton 1----------*/
-
-nav .menu-opt a
-{
     overflow: hidden;
-    border: 5px solid var(--midPurpleColor);
     z-index: 2;
 }
-
 
 nav .menu-opt a::before
 {
@@ -165,7 +147,7 @@ nav .menu-opt a::before
     z-index: -1;
 }
 
-nav .menu-opt a:hover:before
+nav .menu-opt a:hover::before
 {
     top: 0;
     border-radius: 0%;
@@ -174,15 +156,10 @@ nav .menu-opt a:hover:before
 .menu-opt a
 {
     position: relative;
-    padding: 20px 50px;
     text-decoration: none;
     color: var(--whiteColor);
-    text-indent: 10px;
     z-index: 2;
 }
-
-
-
 
 #menuToggle, .menu-icon
 {
@@ -283,7 +260,6 @@ button
 
 .card-cont
 {
-    /* padding: 300px; */
     position: relative;
 }
 
@@ -302,7 +278,6 @@ button
 .card-cont .card
 {
     transition: all 0.15s;
-
 }
 
 .card-cont .card:first-child
@@ -373,7 +348,7 @@ footer .social nav ul
 footer .social .social-buttons a
 {
     text-decoration: none;
-    color: white;
+    color: var(--whiteColor);
     font-size: 24px;
     width: 50px;
     height: 50px;
@@ -393,7 +368,8 @@ footer h2
     align-items: center;
 }
 
-.social-buttons a:hover {
+.social-buttons a:hover 
+{
     opacity: 0.8;
 }
 
