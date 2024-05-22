@@ -411,7 +411,7 @@ footer .social .social-buttons a ::after
     background-color: var(--midPurpleColor);
     
     position: absolute;
-    z-index: ;
+    z-index: -1;
     left: 0;
     top: 0;
 }
